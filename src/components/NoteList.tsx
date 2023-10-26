@@ -62,6 +62,8 @@ export function NoteList({ availableTags }: NoteListProps) {
           </Col>
         </Row>
       </Form>
+
+      <Row ></Row>
     </>
   );
 }
