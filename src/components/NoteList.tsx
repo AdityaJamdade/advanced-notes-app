@@ -3,6 +3,7 @@ import { Row, Col, Stack, Button, Form, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ReactSelect from "react-select";
 import { Note, Tag } from "../App";
+import styles from '../styles/NoteList.module.css'
 
 type SimpleNote = {
   id: string;
@@ -95,5 +96,9 @@ export function NoteList({ availableTags, notes }: NoteListProps) {
 }
 
 function NoteCard({ title, id, tags }: SimpleNote) {
-  return <Card></Card>;
+  return (
+    <Card as={Link} to={`/${id}`} className={`h-100 text-reset text-decoration-none ${styles.card}`}>
+      <Card.Body>{title}</Card.Body>
+    </Card>
+  );
 }
