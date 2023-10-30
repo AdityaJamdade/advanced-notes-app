@@ -124,3 +124,4 @@ function NoteCard({ title, id, tags }: SimpleNote) {
     </Card>
   );
 }
+
